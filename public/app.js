@@ -5,19 +5,6 @@ import { getDatabase, ref, push, set, onValue, remove, update } from "https://ww
 // Add SDKs for Firebase products to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
-// Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
-const firebaseConfig = {
-    apiKey: "AIzaSyATksyc01DX9iDayTNGvgvkKo0sV4wzMfU",
-    authDomain: "shared-checklist-16d88.firebaseapp.com",
-    projectId: "shared-checklist-16d88",
-    storageBucket: "shared-checklist-16d88.appspot.com",
-    messagingSenderId: "561694407183",
-    appId: "1:561694407183:web:903f6d77232e77c63c017a",
-    measurementId: "G-6Q9FQ4H4S3",
-    databaseURL: "https://shared-checklist-16d88-default-rtdb.firebaseio.com/"
-};
-
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const database = getDatabase(app);
