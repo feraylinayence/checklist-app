@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shared Checklist</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1 id="header">Bavulda Neler Olmali? </h1>
+    <!-- Your HTML content here -->
+      <div id="mainContainer">
+        <div class="personContainer">
+          <div>
+            <img id="linaBW" src="assets/linaBW.jpg" alt="Sembolik Lina" class="person">
+          </div>
+          <div id="linaSuitcaseContainer" class="suitcaseContainer">
+            <div id="linaSuitcaseFill" class="suitcaseFill"></div>
+            <img id="linaSuitcase" src="assets/linaSuitcase.jpg" alt="Lina's Suitcase" class="suitcase">
+          </div>
+        </div>
+
+        <div id="tableContainer">
+          <table id="checklistTable">
+            <thead>
+              <tr>
+                <th>Esya</th>
+                <th>Adet?</th>
+                <th>Lina Getiriyor!</th>
+                <th>Rana Yanina Aldi!</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody id="checklistContainer">
+              <!-- Table rows will be inserted here dynamically -->
+            </tbody>
+            <tfoot>
+              <tr>
+                <td colspan="5">
+                  <div id="addItemContainer">
+                    <input type="text" id="itemInput" placeholder="Add a new item">
+                    <button id="addItemButton">Bu da lazım</button>
+                  </div>
+                </td>
+              </tr>
+            </tfoot>
+          </table> 
+        </div>
+
+        <div class="personContainer">
+          <div id="ranaSuitcaseContainer" class="suitcaseContainer">
+            <div id="ranaSuitcaseFill" class="suitcaseFill"></div>
+            <img id="ranaSuitcase" src="assets/ranaSuitcase.jpg" alt="Rana's Suitcase" class="suitcase">
+          </div>
+          <div>
+            <img id="ranaBW" src="assets/ranaBW.jpg" alt="Sembolik Rana" class="person">
+          </div>
+        </div>
+      </div>
+
+    <script type="module" src="main.js"></script>
+</body>
+</html>

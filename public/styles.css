@@ -1,0 +1,243 @@
+body {
+    background-color: #c33800; 
+    background-image: url("assets/background.jpg");
+    background-repeat: no-repeat; /* Prevent repeating */
+    background-position: bottom left; /* Position the image at the bottom left */
+    width: 100%; /* Adjust as needed */
+  }
+  
+  h1 {
+    font-size: 72px;
+    font-family: 'HIROSHT', sans-serif;
+    text-align: center;
+    color: #1c252c;
+    text-shadow: -1px -1px 0 #dee2e5, 1px -1px 0 #dee2e5, -1px 1px 0 #dee2e5, 1px 1px 0 #dee2e5;
+  }
+  
+  /* Main container for the table and suitcases */
+  #mainContainer {
+    margin-bottom: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Space between the table and suitcases */
+    margin-top: 20px;
+    flex-direction: column; /* Default to column for mobile screens */
+  }
+  
+  .personContainer {
+    display: flex;
+    align-items: center; /* Ensures the person and suitcase are vertically aligned */
+    flex-direction: row; /* Places the person and suitcase side by side */
+  }
+  
+  #linaBW {
+    width: 130px;
+    margin-left: 100px;
+  }
+  
+  #ranaBW {
+    width: 250px;
+  }
+  
+  #linaSuitcaseContainer {
+    margin-right: 20px;
+  }
+  
+  /* Suitcase container ensures relative positioning */
+  .suitcaseContainer {
+    position: relative;
+    width: 100px; /* Adjust based on the suitcase size */
+    height: auto;
+    margin: 0 auto;
+  }
+  
+  /* Suitcase image */
+  .suitcase {
+    position: relative;
+    width: 100%; /* Fill the container width */
+    height: auto;
+    z-index: 2; /* Keep it above the fill */
+  }
+  
+  /* The filling element */
+  .suitcaseFill {
+    margin-left: 8%;
+    margin-bottom: 2%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 105%; /* Matches the width of the suitcase container */
+    height: 0; /* Starts with no fill */
+    background-color: rgba(22 ,30 ,36 ,255); /* Fill color */
+    z-index: 1; /* Behind the suitcase image */
+    transition: height 0.3s ease; /* Smooth filling effect */
+    clip-path: inset(0); /* Keeps the fill within the container */
+  }
+  
+  /* Media query for larger screens */
+  @media (min-width: 768px) {
+    #mainContainer {
+      flex-direction: row; /* Change to row layout on larger screens */
+    }
+  
+    #tableContainer {
+        width: 40%; /* Shrink table to 40% of the screen */
+    }
+  
+    .suitcase {
+      margin: 0 10px; /* Adjust margin for spacing */
+    }
+  }
+  
+  /* Add Item Container Styling */
+  #addItemContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0;
+  }
+  
+  #addItemContainer input {
+    flex-grow: 1;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 60%; /* Set width to adjust nicely */
+  }
+  
+  #addItemContainer button {
+    padding: 5px 15px;
+    background-color: #4caf50;
+    color: white;
+    border-color: #c33800;
+    border-width: 3px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  #addItemContainer button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Center the table container */
+  #tableContainer {
+    width: 100%; /* Full width on mobile */
+    max-width: 800px; /* Max width for larger screens */
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  
+  /* Table styling */
+  #checklistTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-family: 'mangat', sans-serif;
+    background-color: #e5eeef;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+    
+  /* Header styling */
+  #checklistTable thead {
+    background-color: #1c252c; 
+    color: #dee2e5;
+  }
+    
+  #checklistTable th, 
+  #checklistTable td {
+    padding: 10px;
+    text-align: center;
+  }
+  
+  /* Row styling */
+  #checklistTable tbody tr {
+    color: #161e24;
+    border-bottom: 1px solid #ddd;
+  }
+    
+  /* Zebra striping for rows */
+  #checklistTable tbody tr:nth-child(even) {
+    background-color: #b8d1da; 
+  }
+  
+  /* Hover effect */
+  #checklistTable tbody tr:hover {
+    background-color: #8dbabf;
+  }
+  
+  /* Input styling */
+  #checklistTable input[type="checkbox"] {
+    cursor: pointer;
+  }
+  
+  /* Button styling */
+  #checklistTable button {
+    padding: 5px 10px;
+    border-color: #c33800;
+    border-width: 3px;
+    border-radius: 4px;
+    color: #161e24;
+    background-color: #8da7bc;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 18px;
+    font-family: 'mangat', sans-serif;
+  }
+    
+  #checklistTable button:hover {
+    background-color: #b27c52;
+  }
+  
+  /* Number input styling */
+  #checklistTable input[type="number"] {
+    width: 60px;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+    
+  /* Hide the default checkbox */
+  input[type="checkbox"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: white;
+    border: 2px solid #8da7bc;
+    width: 14px;
+    height: 14px;
+    border-radius: 4px;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  /* Style when the checkbox is checked */
+  input[type="checkbox"]:checked::after {
+    content: '\2717'; /* Checkmark symbol */
+    font-size: 28px;
+    color: #c33800;
+    position: absolute;
+    left: -5px;
+    top: -16px;
+    transform: rotate(24deg); /* Add slight rotation for handwritten style */
+  }
+  
+  @font-face {
+    font-family: 'HIROSHT';
+    src: url('assets/fonts/HIROSHT.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  
+  @font-face {
+    font-family: 'mangat';
+    src: url('assets/fonts/mangat.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+  }
